@@ -21,5 +21,7 @@ public interface ICarStrange {
 
     double getPrice();
 
+    void print();
+
     void setPrice(double price);
 }

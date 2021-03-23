@@ -9,7 +9,7 @@ public class Vehicle implements com.easv.bll.ICarStrange {
     private LocalDate dateBuild;
     private double Price;
 
-    public Vehicle(String licensePlate, String factory, String model, LocalDate dateBuild, float price) {
+    public Vehicle(String licensePlate, String factory, String model, LocalDate dateBuild, double price) {
         LicensePlate = licensePlate;
         Factory = factory;
         Model = model;
@@ -24,7 +24,7 @@ public class Vehicle implements com.easv.bll.ICarStrange {
 
     @Override
     public void setLicensePlate(String licensePlate) {
-        LicensePlate = licensePlate;
+        this.LicensePlate = licensePlate;
     }
 
     @Override
@@ -34,7 +34,7 @@ public class Vehicle implements com.easv.bll.ICarStrange {
 
     @Override
     public void setFactory(String factory) {
-        Factory = factory;
+        this.Factory = factory;
     }
 
     @Override
@@ -44,7 +44,7 @@ public class Vehicle implements com.easv.bll.ICarStrange {
 
     @Override
     public void setModel(String model) {
-        Model = model;
+        this.Model = model;
     }
 
     @Override
@@ -59,11 +59,16 @@ public class Vehicle implements com.easv.bll.ICarStrange {
 
     @Override
     public double getPrice() {
-        return Price;
+        return 0;
+    }
+
+    @Override
+    public void print() {
+        System.out.println(this.LicensePlate + ", " + this.Factory + ", " + this.Price + ", " + this.dateBuild + ", " + this.Model);
     }
 
     @Override
     public void setPrice(double price) {
-        Price = price;
+        this.Price = price;
     }
 }
